@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { h, render, createRef } from 'preact';
 import Intercept from './components/Intercept/Intercept';
 import Config from './config';
 
@@ -28,7 +27,6 @@ function app(window) {
 
         let rawData = tag.getAttribute('data-config');
         rawData = rawData.replace(/'/g, "\"");
-        console.log(rawData);
         let data = JSON.parse(rawData);
 
         window[widgetName] = data.name;
@@ -42,18 +40,12 @@ function app(window) {
 
     let placeholder = window[window[widgetName]];
 
-    // override temporary (until the app loaded) handler
-    // for widget's API calls
     window[window[widgetName]] = apiHandler;
     window[widgetConfigName] = defaultconfig;
 
     if (placeholder) {
-        console.log(`${widgetName} placeholder found`);
-
         let queue = placeholder.q;
         if (queue) {
-            console.log(`${widgetName} placeholder queue found`);
-
             for (var i = 0; i < queue.length; i++) {
                 apiHandler(queue[i][0], queue[i][1]);
             }
@@ -70,9 +62,8 @@ function apiHandler(api, params) {
     let config = window[widgetConfigName];
     let container = null;
 
-    console.log(`Handling API call ${api}`, params, config);
-
     switch (api) {
+
         case 'init':
             config = Object.assign({}, config, params);
             window[widgetConfigName] = config;
@@ -81,8 +72,8 @@ function apiHandler(api, params) {
             container.id = 'dyn-cmix-container';
             document.body.appendChild(container);
                 
-            widgetComponent = React.createRef();
-            ReactDOM.render(
+            widgetComponent = createRef();
+            render(
                 <Intercept ref={widgetComponent} {...config}/>, 
                 document.getElementById('dyn-cmix-container')
             );
@@ -91,6 +82,7 @@ function apiHandler(api, params) {
         case 'show':
             widgetComponent.current.show();
             break;
+
         default:
             throw Error(`Method ${api} is not supported`);
     }

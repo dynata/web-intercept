@@ -1,10 +1,10 @@
-import React from 'react';
-import Config from '../../config';
+import { PureComponent } from 'preact/compat';
+import { h } from 'preact';
 import './intercept.css';
 
 const cookieName = "dyn-popup-seen"
 
-class Intercept extends React.Component {
+class Intercept extends PureComponent {
     constructor(props) {
         super(props);
         let hidden = false;
