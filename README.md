@@ -39,7 +39,10 @@ Here's what the default configuration looks like:
     callToActionHeader: "How was your experience?",
     callToActionButtonText: "Take a Quick Survey",
     deferText: "Take survey later",
-    hideOnLoad: false
+    hideOnLoad: false,
+    cookieName: "dyn-popup-seen",
+    cookieTTL: 3600 * 24 * 2,//2 days
+    allowHTML: false
 }
 ```
 
@@ -54,6 +57,9 @@ Here's what the default configuration looks like:
 | callToActionButtonText | (string) Button Text for Survey call to action  |
 | deferText | (string) Text for link to hide the survey  |
 | hideOnLoad | (bool) Use this if you want to control when to show the popup |
+| cookieName | (string) In case you want to customize the cookie name   |
+| cookieTTL | (number) How long to hide the popup for  (seconds) |
+| allowHTML | (boolean) If set to TRUE, the footer text can use HTML. Markup will be sanitized using DOMPurify to avoid cross-side scripting |
 
 
 ### Controlling when the popup shows up

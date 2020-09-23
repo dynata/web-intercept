@@ -8,11 +8,14 @@ const defaultconfig = {
     logo: "https://github.com/dynata/web-intercept/blob/master/assets/horizontal%402x.png?raw=true",
     surveyURL: "https://www.google.com",
     position: "bottom-right",
-    footerText: "This study is for research purposes only and your reponses will remain confidential. At no time will you be asked to purchase anything, and no one will contact you as a result of your participation.",
+    footerText: "<b>This study</b> is for research purposes only and your reponses will remain confidential. At no time will you be asked to purchase anything, and no one will contact you as a result of your participation.",
     callToActionHeader: "How was your experience?",
     callToActionButtonText: "Take a Quick Survey",
     deferText: "Take survey later",
-    hideOnLoad: false
+    hideOnLoad: false,
+    cookieName: "dyn-popup-seen",
+    cookieTTL: 3600 * 24 * 2, //2 days
+    allowHTML: true
 };
 
 let widgetComponent = null;
