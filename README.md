@@ -1,6 +1,10 @@
 # Web Intercept
 
-This is a WIP.
+Web Intercept is a drop-in Javascript widget to display a popup widget as a call to action for a survey.
+
+
+![alt text](https://github.com/dynata/web-intercept/blob/master/example.png?raw=true)
+
 
 ### Usage
 You can synchronously or asynchronously add the widget tag.
@@ -91,3 +95,6 @@ Example using a button click event to display the popup:
 
 </html>
 ```
+
+
+
