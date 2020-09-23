@@ -1,0 +1,41 @@
+.widget-container {
+    border: 2px solid rgb(223, 226, 223);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.widget-logo {
+    max-width: 120px;
+    max-height: 100px;
+}
+
+.widget-container h3 {
+    line-height: 28px;
+}
+
+.widget-cta-button {
+    border-radius: 4px;
+    color: #ffffff;
+    fill: #217AB5;
+    background-color: #217AB5;
+    box-shadow: none;
+    border: 0;
+    padding: 10px 10px 10px 10px;
+    font-size: medium;
+}
+
+.widget {
+    position: fixed;
+}
+
+.widget-bottom-right {
+    bottom: 55px;
+    right: 55px;
+}
+
+.widget-top-right {
+    top: 55px;
+    right: 55px;
+}
