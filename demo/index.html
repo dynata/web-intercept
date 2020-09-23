@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <h1>Lorem ipsum dolor sit amet augue</h1>
+    <h1>Web Intercept Demo</h1>
     
     <script>
         (function (w, d, s, o, f, js, fjs) {
@@ -13,7 +13,7 @@
             js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
             js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
         }(window, document, 'script', 'w1', './widget.js'));
-        w1('init', { targetElementId: 'root' });
+        w1('init', { surveyURL: 'https://www.google.com', position: 'top-left' });
     </script>
 
     <div><button onclick="w1('message', 'Hello world!');">Hide</button></div> <br/>

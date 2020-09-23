@@ -9,16 +9,25 @@ class Intercept extends React.Component {
     constructor(props) {
         super(props);
         console.log(props)
-        // this.state = {};
+    }
+
+    openSurvey() {
+        window.open(this.props.surveyURL, "_blank");
+    }
+
+    position() {
+
     }
 
     render() {
         return (
-            <div className="widget-container">
+            <div className={"widget-container" + " widget-" + this.props.position}>
                 <img className="widget-logo" src={this.props.logo}></img>
 
                 <h3>{this.props.callToActionHeader}</h3>
-                <button className="widget-cta-button">{this.props.callToActionButtonText}</button>
+                <button className="widget-cta-button" onClick={() => this.openSurvey()}>
+                    {this.props.callToActionButtonText}
+                </button>
 
 
                 <h5>{this.props.deferText}</h5>
