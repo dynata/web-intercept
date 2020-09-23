@@ -48,13 +48,16 @@ class Intercept extends React.Component {
                 <div className="widget-close">
                     <button onClick={() => this.hide()}>X</button>
                 </div>
-                <img className="widget-logo" src={this.props.logo}></img>
+
+                { !this.props.logo ||
+                    <img className="widget-logo" src={this.props.logo}></img>
+                }
+                
 
                 <h3>{this.props.callToActionHeader}</h3>
                 <button className="widget-cta-button" onClick={() => this.openSurvey()}>
                     {this.props.callToActionButtonText}
                 </button>
-
 
                 <h5 onClick={() => this.hideForLater()}>{this.props.deferText}</h5>
                 <div className="widget-footer">{this.props.footerText}</div>

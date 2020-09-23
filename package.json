@@ -1,13 +1,13 @@
 {
-  "name": "simple-widget",
+  "name": "web-intercept",
   "version": "1.0.0",
-  "description": "",
+  "description": "A web intercept widget meant for displaying a survey call to action.",
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack.config.js --mode production --env.production",
     "start": "./node_modules/.bin/webpack-dev-server --open --mode development --env.development",
     "test": "jest"
   },
-  "author": "",
+  "author": "Saadullah Saeed",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.2",

@@ -17,7 +17,7 @@ Initialize the popup using `init` with a configuration object:
 
 ```js
 w1('init', { 
-    surveyURL: 'https://surveys.cmix.com/token/something', 
+    surveyURL: 'https://surveys.cmix.com/token/something',  //replace with an actual survey link
     position: 'top-left' 
 });
 ```
@@ -34,9 +34,33 @@ Here's what the default configuration looks like:
     footerText: "This study is for research purposes only and your reponses will remain confidential. At no time will you be asked to purchase anything, and no one will contact you as a result of your participation.",
     callToActionHeader: "How was your experience?",
     callToActionButtonText: "Take a Quick Survey",
-    deferText: "Take survey later"
+    deferText: "Take survey later",
+    hideOnLoad: false
 }
 ```
+
+
+| Config  Field | Description   |
+| ------------- | ------------  |
+| logo  | (string) URL for the logo to display  |
+| surveyURL | (string) URL for the CMix Survey  |
+| position | (string/enum) Possible values: bottom-right, top-right, top-left, bottom-left  |
+| footerText | (string) Text to display in the footer  |
+| callToActionHeader | (string) This is the primary heading before the button  |
+| callToActionButtonText | (string) Button Text for Survey call to action  |
+| deferText | (string) Text for link to hide the survey  |
+| hideOnLoad | (bool) Use this if you want to control when to show the popup |
+
+
+### Controlling when the popup shows up
+
+If you're using the `hideOnLoad` configuration, the popup will not immediately display on load. The popup component can be triggered by passing a 'show' message to the component.
+
+Example using a button click event to display the popup:
+```js
+<div><button onClick="javascript: w1('show');">Show</button></div>
+```
+
 
 ### Example
 
