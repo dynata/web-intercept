@@ -17,7 +17,6 @@
     "babel-preset-preact": "^2.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
-    "dompurify": "^2.1.0",
     "jest": "^24.9.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.0",
@@ -25,7 +24,8 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "preact": "^10.5.2"
+    "preact": "^10.5.2",
+    "dompurify": "^2.1.0"
   },
   "babel": {
     "presets": [
