@@ -21,7 +21,7 @@ Initialize the popup using `init` with a configuration object:
 
 ```js
 w1('init', { 
-    surveyURL: 'https://surveys.cmix.com/token/something',  //replace with an actual survey link
+    surveyURL: 'https://surveys.dynata.com/token/something',  //replace with an actual survey link
     position: 'top-left' 
 });
 ```
