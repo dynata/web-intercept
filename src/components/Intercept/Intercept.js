@@ -18,7 +18,7 @@ class Intercept extends PureComponent {
     }
 
     openSurvey() {
-        window.open(this.props.surveyURL, "_blank");
+        window.open(this.props.callToActionURL, "_blank");
     }
 
     show() {

@@ -21,7 +21,7 @@ Initialize the popup using `init` with a configuration object:
 
 ```js
 w1('init', { 
-    surveyURL: 'https://surveys.dynata.com/token/something',  //replace with an actual survey link
+    callToActionURL: 'https://surveys.dynata.com/token/something',  //replace with an actual survey link
     position: 'top-left' 
 });
 ```
@@ -33,7 +33,7 @@ Here's what the default configuration looks like:
 ```js
 {
     logo: "https://zeroheight-uploads.s3-accelerate.amazonaws.",
-    surveyURL: "https://www.google.com",
+    callToActionURL: "https://www.google.com",
     position: "bottom-right",
     footerText: "This study is for research purposes only and your reponses will remain confidential. At no time will you be asked to purchase anything, and no one will contact you as a result of your participation.",
     callToActionHeader: "How was your experience?",
@@ -50,7 +50,7 @@ Here's what the default configuration looks like:
 | Config  Field | Description   |
 | ------------- | ------------  |
 | logo  | (string) URL for the logo to display  |
-| surveyURL | (string) URL for the CMix Survey  |
+| callToActionURL | (string) URL for the CMix Survey  |
 | position | (string/enum) Possible values: bottom-right, top-right, top-left, bottom-left  |
 | footerText | (string) Text to display in the footer  |
 | callToActionHeader | (string) This is the primary heading before the button  |
@@ -92,7 +92,7 @@ Example using a button click event to display the popup:
             js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
         }(window, document, 'script', 'w1', './widget.js'));
         w1('init', { 
-            surveyURL: 'https://www.google.com', 
+            callToActionURL: 'https://www.google.com', 
             position: 'top-left' 
         });
     </script>

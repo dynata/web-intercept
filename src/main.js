@@ -6,7 +6,7 @@ const widgetName = Config.name;
 const widgetConfigName = widgetName + 'Config';
 const defaultconfig = {
     logo: "https://github.com/dynata/web-intercept/blob/master/assets/horizontal%402x.png?raw=true",
-    surveyURL: "https://www.google.com",
+    callToActionURL: "https://www.google.com",
     position: "bottom-right",
     footerText: "<b>This study</b> is for research purposes only and your reponses will remain confidential. At no time will you be asked to purchase anything, and no one will contact you as a result of your participation.",
     callToActionHeader: "How was your experience?",
