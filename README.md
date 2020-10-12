@@ -50,7 +50,7 @@ Here's what the default configuration looks like:
 | Config  Field | Description   |
 | ------------- | ------------  |
 | logo  | (string) URL for the logo to display  |
-| callToActionURL | (string) URL for the CMix Survey  |
+| callToActionURL | (string) URL for the Destination  |
 | position | (string/enum) Possible values: bottom-right, top-right, top-left, bottom-left  |
 | footerText | (string) Text to display in the footer  |
 | callToActionHeader | (string) This is the primary heading before the button  |
